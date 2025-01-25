@@ -1,0 +1,34 @@
+{
+  "name": "xeroshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "connect-mongo": "^5.1.0",
+    "connect-redis": "^7.1.1",
+    "crypto": "^1.0.1",
+    "docx4js": "^1.3.0",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "gridfs-stream": "^1.1.1",
+    "mongodb": "^5.9.1",
+    "mongoose": "^8.8.1",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^5.0.2",
+    "nodemon": "^3.1.7",
+    "page-count": "^0.0.4",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.6.82",
+    "razorpay": "^2.9.5",
+    "redis": "^4.7.0"
+  }
+}

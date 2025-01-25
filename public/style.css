@@ -1,0 +1,439 @@
+* {
+    -webkit-user-select: none;
+    
+    -moz-user-select: none;
+    
+    -ms-user-select: none;
+    
+    user-select: none;
+
+    margin: 0;
+    padding: 0;
+}
+.invert{
+    filter: invert();
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #6a9ab037;
+    align-items: center;
+    gap: 30px;
+}
+h1{
+    padding-left: 30px ;
+}
+.nav{
+   display: flex;
+    height: 50px;
+    width: 100vw;
+    background-color: #001F3F;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav p{
+    margin-right: 50px;
+    font-size: 24px;
+}
+
+.navsvg{
+    height: 30px;
+    margin: 20px;
+   
+    
+}
+
+.bottom {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 15px 0px 0px 0px;
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    background-color: #001F3F;
+    overflow: hidden;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btmsvg{
+    height: 30px;
+}
+
+#addCartForm{
+   
+    padding: 30px;
+   
+    margin-top: 40px;
+}
+
+#side{
+    color: white;
+    margin-top: 55px;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    background-color: #001F3F;
+    left: -260px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    
+}
+
+#closeSideBar{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.bottom img{
+    cursor: pointer;
+}
+
+/* General Form Styling */
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Label Styling */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Input Fields */
+form input[type="file"],
+form input[type="radio"] {
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Radio Buttons Inline Styling */
+form input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Price Display */
+#price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0056b3;
+    text-align: center;
+}
+
+/* Submit Button */
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003d80;
+}
+
+/* Input Styling for Better Spacing */
+form input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+    color: #555;
+}
+
+/* Form Container */
+form > div {
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #price {
+        font-size: 1em;
+    }
+
+    form button {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Cart CSS */
+#cartMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#cartlist li{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+
+#cartlist li button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#totprice{
+    border: none;
+    margin-bottom: 90px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    background-color: #16b649;
+    color: white;
+    padding: 10px;
+    height:50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    
+}
+#totprice:hover{
+    background-color: #106f30;
+}
+
+#cartnum{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    background-color: red;
+    left: 52%;
+    top: 28%;
+    border-radius: 50%;
+    padding: 2px;
+    
+}
+
+/* loader */
+.loader {
+    color: #001F3F;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    transform: translateZ(0);
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  
+  @keyframes mltShdSpin {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 
+      0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, 
+      -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+      -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+       -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+       -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+       -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+       -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+      0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  
+  @keyframes round {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+  }
+   
+
+
+  /* order CSS */
+#orderMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+
+#orderlist li{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#ordernum{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    background-color: red;
+    left: 85%;
+    top: 28%;
+    border-radius: 50%;
+    padding: 2px;
+    
+}
+
+#orderlistcontent{
+    width: 100%;
+}
+
+
+  /* Admin CSS */
+  #adminMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#adminlist li{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    min-width: 600px;
+    
+}
+
+
+#adminlistcontent{
+    width: 100%;
+}
+
+#adminlistbtns{
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.statusclr, .statusclrs{
+    width: 220px;
+    padding: 2px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.adminlogoutdiv{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.adminlogoutdiv button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#adminlist #open, #completed{
+    cursor: pointer;
+}
+
+/* media q's */
+
+@media (min-width: 700px) {
+    #orderlist li, #cartlist li {
+        min-width: 550px;
+    }
+}
+
+

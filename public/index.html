@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+</head>
+<body>
+    <div class="nav">
+        <img class="invert navsvg" src="img/user.svg" alt="" id="usericon">
+        <p>XeroStation</p>
+    </div>
+    <div class="main" id="main">
+        <h1>Place Your Order</h1>
+        <form id="addCartForm" action="/addToCart" method="POST" enctype="multipart/form-data" >
+            <!-- File Upload -->
+            <label for="file">Upload File (PDF/Word):</label>
+            <input type="file" id="file" name="file" accept=".pdf" required><br><br>
+        
+            <!-- Print Type -->
+            <label>Print Type:</label>
+            <input type="radio" id="blackAndWhite" name="color" value="blackAndWhite" required> Black & White
+            <input type="radio" id="color" name="color" value="color"> Color<br><br>
+        
+            <!-- Print Mode -->
+            <label>Print Mode:</label>
+            <input type="radio" id="singlePage" name="pageMode" value="singlePage" required> Single Page
+            <input type="radio" id="frontAndBack" name="pageMode" value="frontAndBack"> Front & Back<br><br>
+        
+            <!-- Print Block -->
+            <label>Print block:</label>
+            <input type="radio" id="D-block" name="printblock" value="D-block" required> D-block
+            <input type="radio" id="P-block" name="printblock" value="P-block"> P-block<br><br>
+        
+            <!-- Price Display -->
+            <div id="price">Price: Rs 0.00</div><br>
+        
+            <!-- Submit Button -->
+            <button type="submit">Add to Cart</button>
+        </form>
+        
+    </div>
+    <div class="bottom">
+        <img class="invert btmsvg" src="img/home.svg" alt="home" id="homebtn">
+        <img class="invert btmsvg" src="img/cart.svg" alt="cart" id="cartbtn">
+        <img class="invert btmsvg" src="img/orders.svg" alt="orders" id="order">
+        <span id="cartnum"></span>
+        <span id="ordernum"></span>
+    </div>
+     <!-- side bar -->
+      <div id="side">
+        <span id="closeSideBar">X</span>
+      </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="nav.js"></script>
+    <script type="module" src="numUpdate.js"></script>
+    <script type="module" src="usrinfo.js"></script>
+    <script type="module" src="numUpdate2.js"></script>
+</body>
+</html>

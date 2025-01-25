@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Orders</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <img class="invert navsvg" src="img/user.svg" alt="" id="usericon">
+        <p>XeroStation</p>
+    </div>
+
+    <div  id="main">
+    <div class="main" id="orderMain">
+        <h2>Your orders</h1>
+        <div id="orderlistcontent">
+        <span class="loader"></span>
+        <ol id="orderlist">
+        </ol>
+       </div>
+    </div>
+
+    </div>
+    
+    <div class="bottom">
+        <img class="invert btmsvg" src="img/home.svg" alt="home" id="homebtn">
+        <img class="invert btmsvg" src="img/cart.svg" alt="cart" id="cartbtn">
+        <img class="invert btmsvg" src="img/orders.svg" alt="orders" id="order">
+        <span id="cartnum"></span>
+        <span id="ordernum"></span>
+    </div>
+
+    <!-- side bar -->
+    <!-- <div id="side">
+        Username: <span>xxxx</span>
+        <form action="/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+        <span id="closeSidebar">X</span>
+      </div> -->
+
+      <div id="side">
+        <span id="closeSideBar">X</span>
+      </div>
+
+      <script type="module" src="usrinfo.js"></script>
+      <script type="module" src="nav.js"></script>
+      <script type="module" src="numUpdate.js"></script>
+      <script type="module" src="orderClient.js"></script>
+      <script type="module" src="numUpdate2.js"></script>
+</body>
+</html>
